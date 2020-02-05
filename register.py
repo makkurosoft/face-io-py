@@ -15,8 +15,7 @@ args = parser.parse_args()
 save_datas = []
 
 # 出力ディレクトリが存在しなければ、作成
-if not os.path.isdir(args.output_dir):
-    os.makedirs(args.output_dir)
+os.makedirs(args.output_dir, exist_ok=True)
 
 # JSONファイルのパス
 datas_path = os.path.join(args.output_dir, 'datas.json')
